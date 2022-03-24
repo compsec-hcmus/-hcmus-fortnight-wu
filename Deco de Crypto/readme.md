@@ -12,7 +12,7 @@ My friend Deco de Crypto sent me this and challenged me to find his message. But
 - None
 
 ## Attached files
-- [encoded](https://raw.githubusercontent.com/compsec-hcmus/hcmus-fortnight-wu/main/deco-de-crypto/encoded)
+- [encoded](https://raw.githubusercontent.com/compsec-hcmus/hcmus-fortnight-wu/main/Deco%20de%20Crypto/encoded)
 
 ## Summary
 I used base 32 decode and base 64 decode
