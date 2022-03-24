@@ -2,8 +2,8 @@
 
 ![warmup category](https://img.shields.io/badge/Category-Cryptography-brightgreen.svg)  
 ![score](https://img.shields.io/badge/Score_after_CTF-200-blue.svg)  
+![author](https://img.shields.io/badge/Author-SpookyFish%234588-blue.svg)  
 ![solves](https://img.shields.io/badge/Solves-34-lightgrey.svg)
-![Author](https://img.shields.io/badge/Author-SpookyFish%234588-blue.svg) 
 
 ## Description
 My friend Deco de Crypto sent me this and challenged me to find his message. But how am I supposed to crack this code?
