@@ -34,7 +34,7 @@ function getReadme(dir_name) {
     return file_name ? fs.readFileSync(`${dir_name}/${file_name}`, 'utf8') : ''
 }
 
-function deriveTagsFromMd(md_content) {
+function getTagsFromMd(md_content) {
     // re math example
     // ![wArmup category](https://img.shields.io/badge/Category-Warmups-brightgreen.svg)  
     // ![score](http://img.shields.io/badge/Score_after_CTF-50-blue.svg)  
@@ -49,19 +49,17 @@ function deriveTagsFromMd(md_content) {
 
     const _tag = md_content.match(re_tag)?.map(item => (item.match(re_http))[0])
 
-    return {
-        tag: _tag ? _tag : [],
-        md: md_content.replace(re_tag, '')
-    }
+    return _tag ? _tag : []
 }
 
 function mdToHtml(md_content) {
-    return md.render(md_content)
+    return md.render(md_content).replaceAll("\n", "")
 }
 
 function getContent(dir_name) {
     const name = dir_name.split(/\\|\//).slice(-1)[0]
-    const { tag, md } = deriveTagsFromMd(getReadme(dir_name))
+    const md = getReadme(dir_name)
+    const tags = getTagsFromMd(md)
     const detail = mdToHtml(md)
 
     let list = []
@@ -70,7 +68,7 @@ function getContent(dir_name) {
         list.push(getContent(`${dir_name}/${dir}`))
     }
 
-    return { name, tag, detail, list }
+    return { name, tags, detail, list }
 }
 
 function main() {
