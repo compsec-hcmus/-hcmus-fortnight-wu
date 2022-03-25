@@ -1,2 +1,2 @@
 # hcmus-wu
-hcmus writeup 
+hcmus writeup

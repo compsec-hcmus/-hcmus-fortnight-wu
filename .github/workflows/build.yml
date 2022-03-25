@@ -1,0 +1,25 @@
+name: Build
+
+on:
+  push:
+    branches: 
+      - "main"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install and Build 
+        run: |
+          npm install
+          npm run build
+          
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: builded
+          folder: build
