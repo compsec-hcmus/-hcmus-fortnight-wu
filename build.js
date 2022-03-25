@@ -53,7 +53,7 @@ function getTagsFromMd(md_content) {
 }
 
 function mdToHtml(md_content) {
-    return md.render(md_content).replaceAll("\n", "")
+    return md.render(md_content)
 }
 
 function getContent(dir_name) {
