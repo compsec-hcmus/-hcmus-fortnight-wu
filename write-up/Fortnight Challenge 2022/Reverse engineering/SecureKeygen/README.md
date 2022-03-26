@@ -18,7 +18,7 @@ Bài này thuật toán tạo key khá dễ, nhưng quan trọng là phải bi�
 Bài này có hai cách giải, một cách là static, tức là chỉ đọc và phân tích code, còn cách thứ hai là dynamic, ở cách này thay vì hiểu code thì ta sẽ quan sát các giá trị trong hàm check bằng tool [frida](https://frida.re/).
 
 Đầu tiên mở app lên chạy
-![](bluestack.png)
+![]([bluestack.png](https://github.com/compsec-hcmus/hcmus-wu/raw/main/write-up/Fortnight%20Challenge%202022/Reverse%20engineering/SecureKeygen/bluestack.png))
 App khá cơ bản, chỉ có 2 ô để nhập input và một nút check. Ta cần tìm một key hợp lệ cho `"hcmus@fortnight"`. Để decompile file apk, ta dùng tool [jadx](https://github.com/skylot/jadx) hoặc bất cứ tool nào mà các bạn biết là nó có thể decompile file apk.
 
 ```java

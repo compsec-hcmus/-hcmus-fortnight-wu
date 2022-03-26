@@ -129,7 +129,7 @@ Cuối cùng, sau khi được RC4 encrypt (với key là `"YEKDx2ZoxDcCFZzjnhx8
 ```
 flag = CustomBase64(RC4Decrypt(hardcode_string,  "YEKDx2ZoxDcCFZzjnhx8Vx8y9mp7DySPhKipmz0s"))
 ```
-![](img.png)
+![]([img.png](https://github.com/compsec-hcmus/hcmus-wu/raw/main/write-up/Fortnight%20Challenge%202022/Reverse%20engineering/ARGGGGH/img.png))
 [----------------------- Link để test -----------------------](https://gchq.github.io/CyberChef/#recipe=From_Hex('%5C%5Cx')RC4(%7B'option':'UTF8','string':'YEKDx2ZoxDcCFZzjnhx8Vx8y9mp7DySPhKipmz0s'%7D,'Latin1','Latin1')From_Base64('abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ%2B/',true)&input=XHhjNVx4ZjRceGNlXHgwM1x4MmFceGQyXHhmZlx4MzhceDFlXHhiZFx4NjdceDQ5XHhlNFx4MTBceGU2XHg4Nlx4MTFceGU4XHgzYlx4MTBceDE4XHg4Nlx4ZGZceGVmXHhhOFx4YTdceDk4XHgzOFx4NjlceGFiXHhjNFx4ZWVceGUxXHg1YVx4NGFceDU0XHg4Ylx4ZTFceDAzXHgyMVx4NWNceGFmXHgxM1x4NmU).
 
 ### Flag
