@@ -21,7 +21,7 @@ It's an RSA challenge that can be solved using the Blinding attack.
 ### Detailed solution
 The challenge itself is quite straight forward, it's a signing server that can sign our commands, verify our signed commands and execute those commands.  
 Tracing back from the commands that we can execute, we see that we can get the flag using "peek flag"  
-```
+```python
 if verified_cmd == "peek flag":
     self.send("Here is the flag!\n" + self.flag)
     break
@@ -29,7 +29,7 @@ if verified_cmd == "peek flag":
 
 So the problem is simple, send "peek flag", get signed, send back the signed command, get flag, get some pizza, enjoy the afternoon.  
 But here's a catch, the `sign` function won't let us sign commands starting with "peek"  
-```
+```python
 def sign(self, msg):
     hex_str_of_peek = binascii.hexlify("peek".encode()).decode()
     if msg.startswith(hex_str_of_peek):
@@ -49,13 +49,13 @@ This is where the **Blinding attack** comes in.
 By this attack, instead of sending m, we can send m1 = m\*k^e mod n for some arbitrary k.  
 Then when we get back C1 = m1^d mod n = m^d\*k^(ed) mod n = m^d\*k mod n, we can just divide C1 by k and get C = m^d mod n. We can then send this C value to verify and get the flag.  
 One key thing that we will need is ofcourse the public key, since we need to calculate m1 = m\*k^e mod n. Luckily, the server also send us the public key with the "get_pubkey" command.  
-```
+```python
 elif verified_cmd == "get pubkey":
     self.send("Here is the public key!\n" + str(rsa.get_public_key()) + "\n")
 ```
 
 With that idea in mind, let's write some helper functions.  
-```
+```python
 from pwn import *
 from binascii import hexlify, unhexlify
 from Crypto.Util.number import bytes_to_long, long_to_bytes, inverse
@@ -98,7 +98,7 @@ def to_verify(conn, cmd, get_output=False):
 ```
 
 And of course, the main action, here I choose k = 5.  
-```
+```python
 signed_cmd = to_sign(conn, "get pubkey")
 pubkey = to_verify(conn, signed_cmd, True)
 
@@ -119,7 +119,7 @@ conn.close()
 ```
 
 The full script:  
-```
+```python
 from pwn import *
 from binascii import hexlify, unhexlify
 from Crypto.Util.number import bytes_to_long, long_to_bytes, inverse
