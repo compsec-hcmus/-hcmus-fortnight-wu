@@ -13,7 +13,7 @@ Use nc 103.245.249.107 20302 to connect and solve the challenge.
 - None
 
 ### Attached files
-- 
+- [encrypt.py](https://raw.githubusercontent.com/compsec-hcmus/hcmus-wu/main/write-up/Fortnight%20Challenge%202022/Cryptography/I'll%20Be%20Back/encrypt.py)
 
 ### Summary
 It's a classic one time pad (OTP) challenge.
