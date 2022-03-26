@@ -15,7 +15,7 @@ My friend Deco de Crypto sent me this and challenged me to find his message. But
 - [encoded](https://github.com/compsec-hcmus/hcmus-wu/raw/main/write-up/Fortnight%20Challenge%202022/Cryptography/Deco%20de%20Crypto/encoded)
 
 ### Summary
-I used base 32 decode and base 64 decode
+Use base32 decode and base64 decode repeatedly.
 
 ### Detailed solution
 The challenge looks like it's the type of challenge that would repeatedly encode the message using various types of encodings. Since we don't know how many encodings are used, or how many times they are used. Based on the relatively short length of the message, we can guess it may have been encoded with hex, base32, and base64, the three most common encodings.  
