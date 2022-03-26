@@ -19,13 +19,6 @@ Use nc 103.245.249.107 20314 to connect and solve the challenge.
 It's an RSA challenge that can be solved using the Blinding attack.
 
 ### Detailed solution
-[Provide the detailed solution of the ctf here.]
-Some rules:
-Name of tool, name of file, name of functions, etc: put in 1 set of backtick:  `name of something`
-Code snippet, console output, other long multilines of text: put in 3 sets of backticks on a new line: 
-```code snippet```
-Key ideas, name of person who invented the method, etc: put in bold **name of someone** 
-
 The challenge itself is quite straight forward, it's a signing server that can sign our commands, verify our signed commands and execute those commands.  
 Tracing back from the commands that we can execute, we see that we can get the flag using "peek flag"  
 ```
@@ -53,9 +46,9 @@ And `verify` will revert it back to C^e mod n = m^(de) mod n = m mod n.
   
 But since the server will not sign m, we can sneakily send some m1 such that we can later convert m1 back to m and get it verified.  
 This is where the **Blinding attack** comes in.  
-By this attack, instead of sending m, we can send m1 = m*k^e mod n for some arbitrary k.  
-Then when we get back C1 = m1^d mod n = m^d*k^(ed) mod n = m^d*k mod n, we can just divide C1 by k and get C = m^d mod n. We can then send this C value to verify and get the flag.  
-One key thing that we will need is ofcourse the public key, since we need to calculate m1 = m*k^e mod n. Luckily, the server also send us the public key with the "get_pubkey" command.  
+By this attack, instead of sending m, we can send m1 = m\*k^e mod n for some arbitrary k.  
+Then when we get back C1 = m1^d mod n = m^d\*k^(ed) mod n = m^d\*k mod n, we can just divide C1 by k and get C = m^d mod n. We can then send this C value to verify and get the flag.  
+One key thing that we will need is ofcourse the public key, since we need to calculate m1 = m\*k^e mod n. Luckily, the server also send us the public key with the "get_pubkey" command.  
 ```
 elif verified_cmd == "get pubkey":
     self.send("Here is the public key!\n" + str(rsa.get_public_key()) + "\n")
