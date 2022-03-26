@@ -31,15 +31,15 @@ So I propose a way to pin point exactly where the flag is.
 Looking once again at the picture, we see that there is a Pharmacity and a Ministop in front of the TCH place. So by searching every TCH, Pharmacity, and Ministop, take a picture, then stack them onto each other, we can see where the three places intersect, and that place should contain the flag.  
 
 The TCH places in HCMC:  
-![tch1](https://user-images.githubusercontent.com/100995040/160239898-7c2ac801-d9f7-44e2-b7cd-eacd70df915b.png)
+![tch1](https://user-images.githubusercontent.com/100995040/160239898-7c2ac801-d9f7-44e2-b7cd-eacd70df915b.png)  
 The Pharmacity places in HCMC stack on top of the TCH places:  
-![tch2](https://user-images.githubusercontent.com/100995040/160239910-f34c9209-eb1a-4b91-bbcf-ae3362b80311.png)
+![tch2](https://user-images.githubusercontent.com/100995040/160239910-f34c9209-eb1a-4b91-bbcf-ae3362b80311.png)  
 The Ministop places in HCMC stack on top of Pharmacity and TCH places:  
-![tch3](https://user-images.githubusercontent.com/100995040/160239914-b66df000-a1a7-4d41-95ae-367c04177d83.png)
+![tch3](https://user-images.githubusercontent.com/100995040/160239914-b66df000-a1a7-4d41-95ae-367c04177d83.png)  
 There is indeed only one place that fits the scheme:  
-![tch](https://user-images.githubusercontent.com/100995040/160239920-926c20f4-329a-47f5-b691-e83d8c875ec8.png)
+![tch](https://user-images.githubusercontent.com/100995040/160239920-926c20f4-329a-47f5-b691-e83d8c875ec8.png)  
 Looking in the reviews, we find the flag.  
-![review](https://user-images.githubusercontent.com/100995040/160239925-8d74e39a-8b2f-4603-8320-4dfce1787183.png)
+![review](https://user-images.githubusercontent.com/100995040/160239925-8d74e39a-8b2f-4603-8320-4dfce1787183.png)  
 
 ### Flag
 ```
