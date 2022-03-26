@@ -19,16 +19,13 @@ Use Photoshop to stack the images of the places in the pictures together to find
 
 ### Detailed solution
 [Provide the detailed solution of the ctf here.]
-Some rules:
-Name of tool, name of file, name of functions, etc: put in 1 set of backtick:  `name of something`
-Code snippet, console output, other long multilines of text: put in 3 sets of backticks on a new line: 
-```code snippet```
-Key ideas, name of person who invented the method, etc: put in bold **name of someone** 
-
 From the clues in the challenge description we can deduce that the person is in a coffee place in HCM City, and the flag is in the review section of that place on Google Maps.   
 Looking at the picture, we can see that the person is in The Coffee House, however, there are more than 15 TCH in HCMC. Of course one can check the reviews of each TCH to find the flag, but doing so strips the challenge of its magic.  
 So I propose a way to pin point exactly where the flag is.  
-Looking once again at the picture, we see that there is a Pharmacity and a Ministop in front of the TCH place. So by searching every TCH, Pharmacity, and Ministop, take a picture, then stack them onto each other, we can see where the three places intersect, and that place should contain the flag.  
+Looking once again at the picture, we see that there is a Pharmacity and a Ministop in front of the TCH place.  
+![save_me_pls](https://user-images.githubusercontent.com/100995040/160240007-2ebf3fcc-72e8-4813-93c1-6c7beeeb6d86.jpg)  
+  
+So by searching every TCH, Pharmacity, and Ministop, take a picture, then stack them onto each other, we can see where the three places intersect, and that place should contain the flag.  
 
 The TCH places in HCMC:  
 ![tch1](https://user-images.githubusercontent.com/100995040/160239898-7c2ac801-d9f7-44e2-b7cd-eacd70df915b.png)  
