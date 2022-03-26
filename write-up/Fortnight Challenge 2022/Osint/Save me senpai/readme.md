@@ -1,6 +1,6 @@
 ## Fortnight challenge 2022: Save me senpai
 
-![warmup category](https://img.shields.io/badge/Category-Cryptography-brightgreen.svg)  
+![warmup category](https://img.shields.io/badge/Category-OSINT-brightgreen.svg)  
 ![score](https://img.shields.io/badge/Score_after_CTF-200-blue.svg)  
 ![author](https://img.shields.io/badge/Author-SpookyFish%234588-blue.svg)  
 ![solves](https://img.shields.io/badge/Solves-25-lightgrey.svg)
