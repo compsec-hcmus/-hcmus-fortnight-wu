@@ -13,7 +13,7 @@ Use nc 103.245.249.107 20314 to connect and solve the challenge.
 - None
 
 ### Attached files
-- 
+- [server.py](https://raw.githubusercontent.com/compsec-hcmus/hcmus-wu/main/write-up/Fortnight%20Challenge%202022/Cryptography/Really%20Silly%20Algorithm/server.py)
 
 ### Summary
 It's an RSA challenge that can be solved using the Blinding attack.
