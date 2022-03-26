@@ -20,7 +20,7 @@ Use base32 decode and base64 decode repeatedly.
 ### Detailed solution
 The challenge looks like it's the type of challenge that would repeatedly encode the message using various types of encodings. Since we don't know how many encodings are used, or how many times they are used. Based on the relatively short length of the message, we can guess it may have been encoded with hex, base32, and base64, the three most common encodings.  
 With that in mind, I wrote a script to solve it automatically.  
-```
+```python
 from binascii import unhexlify  
 from string import ascii_lowercase,  ascii_uppercase, digits  
 from base64 import b64decode, b32decode  
