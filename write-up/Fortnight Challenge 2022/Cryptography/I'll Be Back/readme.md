@@ -20,7 +20,7 @@ It's a classic one time pad (OTP) challenge.
 
 ### Detailed solution
 Reading the code, particularly the `get_key` function, is a good way to get an idea of how to solve the challenge.  
-```
+```python
 def get_key(self, length):
     if self.key == "":
         self.key = ''.join(choice(ascii_uppercase + digits) for _ in range(KEY_LENGTH))
@@ -35,7 +35,7 @@ This is a weakness that we can exploit, because the problem encrypts its flag by
 However, one bottleneck is that the server only accept 1000 characters at a time, but since we're communicating in hex, that's only 500 characters each time, so this require some rudimentary maths to get around.  
 
 With the solution in mind, let's connect to the server and get the encrypted flag, and set the KEY_LENGTH accordingly.  
-```
+```python
 from pwn import *
 conn = remote("103.245.249.107", 20302)
 
@@ -50,7 +50,7 @@ KEY_LENGTH -= flag_length
 ```
 
 Now we can iteratively send trash data to the server to expend the key until we can loop it back around to the beginning.  
-```
+```python
 while True:
     print(conn.recvuntil("Your message: ".encode()).decode())
     
@@ -68,7 +68,7 @@ while True:
 ```
 
 Finally, we send out the encrypted flag to get the flag back.  
-```
+```python
 print(conn.recvuntil("Your message: ".encode()).decode())
 print(encrypted_flag)
 conn.send((encrypted_flag + "\n").encode())
@@ -81,7 +81,7 @@ print("The flag is: " + bytearray.fromhex(flag).decode())
 ```
 
 Full script:  
-```
+```python
 from pwn import *
 conn = remote("103.245.249.107", 20302)
 
