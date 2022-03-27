@@ -14,20 +14,22 @@ The format of the flag is f0rtn1ght{what_you_found} with "what_you_found" is wha
 - None
 
 ### Attached files
-- 
+- [FLAG_1.WAV](https://github.com/compsec-hcmus/hcmus-wu/blob/main/write-up/Fortnight%20Challenge%202022/Forensics/CAPTURE%20THE%20FLAG/FLAG_1.WAV?raw=true)
+- [FLAG_2.PNG(https://github.com/compsec-hcmus/hcmus-wu/blob/main/write-up/Fortnight%20Challenge%202022/Forensics/CAPTURE%20THE%20FLAG/FLAG_2.PNG?raw=true)
+- [FLAG_3](https://github.com/compsec-hcmus/hcmus-wu/blob/main/write-up/Fortnight%20Challenge%202022/Forensics/CAPTURE%20THE%20FLAG/FLAG_3?raw=true)
 
 ### Summary
 Spectrogram in Audacity, binwalk, hexedit gives 8 coordinates, the first letters of each country is the flag.
 
 ### Detailed solution
 For the first file, it's a .wav file with nothing interesing going on when listening to it. However, opening it in Audacity under spectrogram mode reveals 3 sets of coordinates.  
-
+![image](https://user-images.githubusercontent.com/100995040/160265097-77cd845f-e1ed-45aa-983f-ac7d6def941b.png)  
 45,4215N, 75.6972W  
 23.5880N, 58.3829E  
 27.7172N, 85.3240E  
   
 For the second file, the solution to the riddle is of course the capital letters of each line - binwalk.  
-
+![image](https://user-images.githubusercontent.com/100995040/160265103-bdb2e68f-3107-4ddf-9166-6fe019f1836f.png)  
 Running `binwalk FLAG_2.PNG` on it reveals that there's a .rar file hidden inside.  
 ```
 $ binwalk FLAG_2.PNG
@@ -41,6 +43,7 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 13090889      0xC7C049        Qualcomm device tree container, version: 1671221820, DTB entries: 1392494259
 ```
 We can carve out the files using `binwalk -e FLAG_2.PNG`. After extracting it, we find a good_job.pdf file, and at the last page of the pdf, we find another set of coordinates.  
+![image](https://user-images.githubusercontent.com/100995040/160265110-956ffd24-d0b3-4cfe-b5dc-e338b8482ff3.png)  
 64.1814N, 51.6941W  
 44.4268N, 26.1025E  
 35.2802S, 149.1310E  
@@ -54,6 +57,7 @@ $ xxd -l 64 FLAG_3
 00000030: 0001 0000 0000 0000 fffe 000d 4170 706c  ............Appl
 ```
 The file seems to be a JFIF file, but the first for bytes (69 69 69 69) are obviously edited. A quick Google search shows that it's supposed to be FF D8 FF E0. Using [hexedit](https://hexed.it/) to correct the header, it turns out the file is an image with 2 final coordinates.  
+![image](https://user-images.githubusercontent.com/100995040/160265122-2dec9507-3183-4a86-bbaf-f5e63e003a22.png)  
 39.9334N, 32.8597E  
 59.3293N, 18.0686E  
   
