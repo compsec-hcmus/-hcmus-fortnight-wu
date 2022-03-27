@@ -12,7 +12,7 @@ I've just got to HCM City yesterday but spookyfish is now holding me captive at 
 - None
 
 ### Attached files
-- 
+- [save_me_pls.png](https://github.com/compsec-hcmus/hcmus-wu/blob/main/write-up/Fortnight%20Challenge%202022/Osint/Save%20me%20senpai/save_me_pls.jpg?raw=true)
 
 ### Summary
 Use Photoshop to stack the images of the places in the pictures together to find where it is.
