@@ -12,7 +12,8 @@ I just fished 2 pictures out from the trashbin. I don't need both of them at onc
 - None
 
 ### Attached files
-- 
+- [img_1.png](https://github.com/compsec-hcmus/hcmus-wu/blob/main/write-up/Fortnight%20Challenge%202022/Forensics/Gogeta%20Gotenks/img_1.png?raw=true)
+- [img_2.png](https://github.com/compsec-hcmus/hcmus-wu/blob/main/write-up/Fortnight%20Challenge%202022/Forensics/Gogeta%20Gotenks/img_2.png?raw=true)
 
 ### Summary
 Xor the two images together.
@@ -29,7 +30,7 @@ convert img_1.png img_2.png -fx "(((255*u)&(255*(1-v)))|((255*(1-u))&(255*v)))/2
 ```
 
 And we get the flag image:  
-
+![flag](https://user-images.githubusercontent.com/100995040/160264962-6cf88adb-edbb-40ca-ac52-36f452c42a52.png)  
 
 ### Flag
 ```
