@@ -11,11 +11,13 @@ WOW YOU HAVE GONE QUITE A LONG WAY HUH. BUT SO FAR YOU ONLY RELIED ON CAPITAL LE
 The format of the flag is f0rtn1ght{what_you_found} with "what_you_found" is what you found after solving the challenge.
 
 ### Hints
-- None
+- Maybe there's a mode of displaying the sound files such that it will reveal something?  
+- Hmm, the name of the tool must be somewhere in the poem.  
+- It seems the header of that file is changed somehow, how can we change it back?  
 
 ### Attached files
 - [FLAG_1.WAV](https://github.com/compsec-hcmus/hcmus-wu/blob/main/write-up/Fortnight%20Challenge%202022/Forensics/CAPTURE%20THE%20FLAG/FLAG_1.WAV?raw=true)
-- [FLAG_2.PNG(https://github.com/compsec-hcmus/hcmus-wu/blob/main/write-up/Fortnight%20Challenge%202022/Forensics/CAPTURE%20THE%20FLAG/FLAG_2.PNG?raw=true)
+- [FLAG_2.PNG](https://github.com/compsec-hcmus/hcmus-wu/blob/main/write-up/Fortnight%20Challenge%202022/Forensics/CAPTURE%20THE%20FLAG/FLAG_2.PNG?raw=true)
 - [FLAG_3](https://github.com/compsec-hcmus/hcmus-wu/blob/main/write-up/Fortnight%20Challenge%202022/Forensics/CAPTURE%20THE%20FLAG/FLAG_3?raw=true)
 
 ### Summary
@@ -62,14 +64,14 @@ The file seems to be a JFIF file, but the first for bytes (69 69 69 69) are obvi
 59.3293N, 18.0686E  
   
 The 8 coordinates points to capitals of 8 different countries:  
-Ottawa,     Canada
-Muscat,     Oman
-Kathmandu,  Nepal
-Nuuk,       Greenland
-Bucharest,  Romania
-Canberra,   Australia
-Ankara,     Turkey
-Stockholm,  Sweden
+Ottawa,     Canada  
+Muscat,     Oman  
+Kathmandu,  Nepal  
+Nuuk,       Greenland  
+Bucharest,  Romania  
+Canberra,   Australia  
+Ankara,     Turkey  
+Stockholm,  Sweden  
 
 Since the challenge description tells us to stop looking at the capitals and instead focus on the big picture, we can piece the first letters of each contries to form the word: CONGRATS.  
 
