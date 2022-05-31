@@ -2,7 +2,7 @@
 
 &#128204; Tham gia ngay: https://bit.ly/hcmus-securityday2022-dangky
 
-![poster]([poster.png](https://github.com/compsec-hcmus/hcmus-wu/raw/main/write-up/H%E1%BB%98I%20TH%E1%BA%A2O%20TR%E1%BB%B0C%20TUY%E1%BA%BEN%20%22M%C3%83%20H%C3%93A%20%E1%BB%A8NG%20D%E1%BB%A4NG%20TRONG%20H%E1%BB%86%20TH%E1%BB%90NG%20PH%C3%82N%20T%C3%81N%22/poster.png))
+![poster.png](https://raw.githubusercontent.com/compsec-hcmus/hcmus-wu/main/write-up/H%E1%BB%98I%20TH%E1%BA%A2O%20TR%E1%BB%B0C%20TUY%E1%BA%BEN%20%22M%C3%83%20H%C3%93A%20%E1%BB%A8NG%20D%E1%BB%A4NG%20TRONG%20H%E1%BB%86%20TH%E1%BB%90NG%20PH%C3%82N%20T%C3%81N%22/poster.png)
 
 
 #### &#127881; Thông tin chi tiết &#127881;
