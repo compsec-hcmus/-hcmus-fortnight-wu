@@ -7,9 +7,9 @@
 
 #### &#127881; Thông tin chi tiết &#127881;
 
-    &#9200; Thời gian: 8h30, ngày 04/06/2022
+    ⏰ Thời gian: 8h30, ngày 04/06/2022
 
-    &#127915; Địa điểm: Trực tuyến (Zoom)
+    🎫 Địa điểm: Trực tuyến (Zoom)
         (link đăng ký sẽ đóng khi đủ số lượng) 
 
 <hr/>
